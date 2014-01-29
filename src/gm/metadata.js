@@ -5,6 +5,7 @@
 // @version       <%= pkg.version %>
 // @description   <%= pkg.description %>
 // @match         *://*.renren.com/*
+// @grant         none
 // ==/UserScript==
 // vim: set nowrap ft= : 
 
