@@ -17,10 +17,10 @@ do ->
     """
 
   ui.scan = ->
-    for chatWindowEl in [].slice.call document.querySelectorAll SEL
+    for chatWindowEl in $ SEL
       # get user id/name
       # FIXME: too dirty now (basically just HTML scrapping)
-      profileLinkEl = chatWindowEl.querySelector("a[title*='主页']")
+      profileLinkEl = chatWindowEl.querySelector "a[title*='主页']"
       if !profileLinkEl then continue
       uid = profileLinkEl.href.match(/renren\.com\/(\d+)/)[1]
       name = profileLinkEl.textContent
@@ -57,8 +57,10 @@ do ->
             core.getChatAll uid, (err, cleanEntries) ->
               if err then return ui.error err
               try
+                [{timeStr}] = cleanEntries[-1..]
+                timeStr = moment(timeStr, 'YYYY-MM-DD HH:mm').format('YYYYMMDD-HHmm')
                 util.download postproc(cleanEntries),
-                  mime, "renren-chatlog-#{uid}-#{name}.#{ext}"
+                  mime, "renren-chatlog-#{uid}-#{name}-#{timeStr}.#{ext}"
               catch e
                 ui.error err
 
