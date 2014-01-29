@@ -63,7 +63,7 @@ do ->
                 ui.error err
 
         # mark as finished
-        chatWindowEl.addClass TAG
+        chatWindowEl.classList.add TAG
 
     return #ui.scan
 
