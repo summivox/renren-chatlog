@@ -8,7 +8,7 @@ $ ->
   console.log '### renren-chatlog starting'
 
   # kisume
-  await window.kisume = Kisume unsafeWindow, {coffee: true}, defer()
+  await window.kisume = Kisume unsafeWindow, 'kisume_rrcl', {coffee: true}, defer()
   await window.kisume.set 'util', [], util, defer()
 
   await
