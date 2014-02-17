@@ -1,16 +1,16 @@
 {"name": "renren-chatlog"
 ,"description": "Dump renren chatlogs into JSON/CSV"
 ,"version": "0.2.2"
-,"homepage": "https://github.com/smilekzs/renren-chatlog"
+,"homepage": "https://github.com/summivox/renren-chatlog"
 ,"author":
-  {"name": "smilekzs"
+  {"name": "summivox"
   }
 ,"repository":
   {"type": "git"
-  ,"url": "git://github.com/smilekzs/renren-chatlog.git"
+  ,"url": "git://github.com/summivox/renren-chatlog.git"
   }
 ,"bugs":
-  {"url": "https://github.com/smilekzs/renren-chatlog/issues"
+  {"url": "https://github.com/summivox/renren-chatlog/issues"
   }
 ,"licenses":
   [ {"type": "MIT"
